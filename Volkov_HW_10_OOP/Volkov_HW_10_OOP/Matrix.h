@@ -102,7 +102,7 @@ Matrix<Temp> Matrix<Temp>::operator+(int a)
     {
         for (int j = 0; j < cols; j++)
         {
-            temp.arr[i][j] += a;
+            temp.arr[i][j] = temp.arr[i][j] + a;
         }
     }
     return temp;
@@ -217,7 +217,7 @@ inline Matrix<Temp>& Matrix<Temp>::operator=(const Matrix<Temp>& obj)
 template<class Temp>
 Temp** Matrix<Temp>::Get_Arr() 
 {
-    return **arr;
+    return arr;
 }
 
 template<class Temp>
@@ -244,9 +244,9 @@ Matrix<Temp> operator+(int a, const Matrix<Temp>& obj){
     Matrix<Temp>rez = obj;
     for (int i = 0; i < obj.Get_Rows(); i++)
     {
-        for (int j = 0; j < obj.Get_Cols; j++)
+        for (int j = 0; j < obj.Get_Cols(); j++)
         {
-            rez.Get_Arr()[i][j] += a;
+            rez.Get_Arr()[i][j] = rez.Get_Arr()[i][j] + a;
         }
     }
     return rez;
