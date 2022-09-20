@@ -1,0 +1,20 @@
+﻿  main.cpp
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(83,38): warning C4244: '=': conversion from 'double' to 'Temp', possible loss of data
+          with
+          [
+              Temp=int
+          ]
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(78): message : while compiling class template member function 'void Matrix<int>::Rand(void)'
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\main.cpp(91): message : see reference to function template instantiation 'void Matrix<int>::Rand(void)' being compiled
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\main.cpp(90): message : see reference to class template instantiation 'Matrix<int>' being compiled
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(83,38): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(78): message : while compiling class template member function 'void Matrix<Point>::Rand(void)'
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\main.cpp(99): message : see reference to function template instantiation 'void Matrix<Point>::Rand(void)' being compiled
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\main.cpp(98): message : see reference to class template instantiation 'Matrix<Point>' being compiled
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(245,28): error C2662: 'int Matrix<Point>::Get_Rows(void)': cannot convert 'this' pointer from 'const Matrix<Point>' to 'Matrix<Point> &'
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(245,25): message : Conversion loses qualifiers
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(26,9): message : see declaration of 'Matrix<Point>::Get_Rows'
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\main.cpp(107): message : see reference to function template instantiation 'Matrix<Point> operator +<Point>(int,const Matrix<Point> &)' being compiled
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(243,1): error C3867: 'Matrix<Point>::Get_Cols': non-standard syntax; use '&' to create a pointer to member
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(247,27): error C2446: '<': no conversion from 'int (__cdecl Matrix<Point>::* )(void)' to 'int'
+C:\Users\User\Desktop\Volkov_HW_10_OOP\Volkov_HW_10_OOP\Matrix.h(247,33): message : There is no context in which this conversion is possible
