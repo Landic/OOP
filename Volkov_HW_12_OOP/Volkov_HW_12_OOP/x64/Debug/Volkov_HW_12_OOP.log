@@ -1,0 +1,31 @@
+﻿  main.cpp
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(64,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(63): message : while compiling class template member function 'void MyArray<int>::Random(void)'
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\main.cpp(8): message : see reference to function template instantiation 'void MyArray<int>::Random(void)' being compiled
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\main.cpp(7): message : see reference to class template instantiation 'MyArray<int>' being compiled
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(66,25): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(193,1): error C2665: 'MyArray<int>::MyArray': none of the 3 overloads could convert all the argument types
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(15,2): message : could be 'MyArray<int>::MyArray(const MyArray<int> &)'
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(14,2): message : or       'MyArray<int>::MyArray(int)'
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(193,18): message : 'MyArray<int>::MyArray(int)': cannot convert argument 1 from 'T *' to 'int'
+          with
+          [
+              T=int
+          ]
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(193,19): message : There is no context in which this conversion is possible
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(14,2): message : see declaration of 'MyArray<int>::MyArray'
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(193,1): message : while trying to match the argument list '(T *)'
+          with
+          [
+              T=int
+          ]
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(192): message : while compiling class template member function 'void MyArray<int>::Remove_Ar(int,int)'
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\main.cpp(35): message : see reference to function template instantiation 'void MyArray<int>::Remove_Ar(int,int)' being compiled
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(203,2): error C3861: 'SetSize': identifier not found
+C:\Users\User\Desktop\Volkov_HW_12_OOP\Volkov_HW_12_OOP\MyArray.h(203,2): message : 'SetSize': function was not declared in the template definition context and can be found only via argument-dependent lookup in the instantiation context
+  MyArray.cpp
+  Generating Code...
