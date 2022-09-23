@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\User\Desktop\Volkov_HW_13_OOP\Volkov_HW_13_OOP\main.cpp(158,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\User\Desktop\Volkov_HW_13_OOP\Volkov_HW_13_OOP\main.cpp(177,19): warning C4805: '==': unsafe mix of type 'char' and type 'bool' in operation
+  Volkov_HW_13_OOP.vcxproj -> C:\Users\User\Desktop\Volkov_HW_13_OOP\x64\Debug\Volkov_HW_13_OOP.exe

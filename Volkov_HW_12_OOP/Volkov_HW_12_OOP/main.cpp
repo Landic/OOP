@@ -4,33 +4,33 @@
 using namespace std;
 
 int main() {
-	MyArray<int> arr(5);
-	arr.Random();
-	arr.Print();
-	cout << endl << arr.Get_Size() << endl;
-	arr.Set_Size(6, 6);
-	cout << endl << arr.Get_Size() << endl;
-	arr.Print();
-	if (arr.IsEmpty() == true) {
+	MyArray<int> arr(5); // create obj
+	arr.Random(); // call method random
+	arr.Print(); // call method print
+	cout << endl << arr.Get_Size() << endl; // output size of array
+	arr.Set_Size(6, 6); // set size array
+	cout << endl << arr.Get_Size() << endl; // output size of array
+	arr.Print(); // call method print
+	if (arr.IsEmpty() == true) { // check empty array or not
 		cout << "Array didn't have elements" << endl;
 	}
 	else {
 		cout << endl << "Array have elements" << endl;
 	}
-	arr.FreeExtra();
-	arr.Print();
-	cout << endl << "Elements: " << arr[1] << endl;
-	arr.SetAt(1,1);
-	arr.Print();
-	arr.Add(5);
-	arr.Print();
+	arr.FreeExtra(); // call method freeextra
+	arr.Print(); // call method print
+	cout << endl << "Elements: " << arr[1] << endl; // return element of array
+	arr.SetAt(1,1); // set new element
+	arr.Print(); // call method print
+	arr.Add(5); // add 5
+	arr.Print(); // call method print
 	MyArray<int> arr2(5);
-	arr2.Random();
-	arr2.Print();
+	arr2.Random(); // random
+	arr2.Print(); // call method print
 	arr2.Append(arr);
-	arr2.Print();
-	arr2.Print();
+	arr2.Print(); // call method print
+	arr2.Print(); // call method print
 	arr.Insert_At(arr2, 2);
-	arr.Print();
+	arr.Print(); // call method print
 	arr.Remove_Ar(1, 2);
 }

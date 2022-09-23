@@ -10,31 +10,31 @@ class MyArray
 	int size;
 	int capacity;
 public:
-	MyArray();
-	MyArray(int s);// size=s; capacity=size;
+	MyArray(); // default constructor
+	MyArray(int s);// size=s; capacity=size; constructor accepting the size of an array
 	MyArray(const MyArray& obj);
-	void Random();
-	void Print();
-	int Get_Size();
-	void Set_Size(int value_size, int grow);
-	int Get_Upper_Bound(int value_size);
-	bool IsEmpty();
-	void FreeExtra();
-	void RemoveAll();
-	int GetAt(int index);
-	void SetAt(int index, T number);
-	int operator[](int index);
-	void Add(T number);
-	void Append(MyArray<T>& value_arr);
-	T* Get_Data();
-	void Insert_At(MyArray& value_arr, int index);
-	void Remove_Ar(int index1, int index2);
-	~MyArray();
-	MyArray& operator=(const MyArray& obj);
+	void Random(); // array method fills with random numbers
+	void Print(); // output
+	int Get_Size(); // return size array
+	void Set_Size(int value_size, int grow); // method sets array size
+	int Get_Upper_Bound(int value_size); // method to get the last valid index
+	bool IsEmpty(); // array check method is empty or not
+	void FreeExtra(); // method removes extra memory
+	void RemoveAll(); // delete all
+	int GetAt(int index); // method to get a specific element by index
+	void SetAt(int index, T number); // method to add a new value for a specific index
+	int operator[](int index); // operator []
+	void Add(T number); // method to add an element to an array
+	void Append(MyArray<T>& value_arr); // array addition method arr + arr2
+	T* Get_Data(); // getter return address of the array
+	void Insert_At(MyArray& value_arr, int index); // method inserts an element at a specific position
+	void Remove_Ar(int index1, int index2); // method to remove an element from a specific position
+	~MyArray(); // destructor
+	MyArray& operator=(const MyArray& obj); // assignment method
 };
 
 template<class T>
-MyArray<T>::MyArray()
+MyArray<T>::MyArray() // default constructor
 {
 	arr = nullptr;
 	size = 0;
@@ -42,7 +42,7 @@ MyArray<T>::MyArray()
 }
 
 template<class T>
-MyArray<T>::MyArray(int value_size)
+MyArray<T>::MyArray(int value_size) // constructor accepting the size of an array
 {
 	capacity = size = value_size;
 	arr = new T[value_size];
@@ -60,7 +60,7 @@ MyArray<T>::MyArray(const MyArray& obj)
 }
 
 template<class T>
-void MyArray<T>::Random() {
+void MyArray<T>::Random() { // array method fills with random numbers
 	srand(time(0));
 	for (int i = 0; i < size; i++) {
 		arr[i] = rand() % 100 * 1.6;
@@ -68,7 +68,7 @@ void MyArray<T>::Random() {
 }
 
 template<class T>
-void MyArray<T>::Print()
+void MyArray<T>::Print() // output
 {
 	for (int i = 0; i < size; i++) {
 		cout << " " << arr[i];
@@ -77,13 +77,13 @@ void MyArray<T>::Print()
 }
 
 template<class T>
-int MyArray<T>::Get_Size()
+int MyArray<T>::Get_Size()// return size array
 {
 	return size;
 }
 
 template<class T>
-void MyArray<T>::Set_Size(int value_size, int grow)
+void MyArray<T>::Set_Size(int value_size, int grow) // method sets array size
 {
 	if (size > value_size) {
 		if (capacity > value_size)
@@ -95,13 +95,13 @@ void MyArray<T>::Set_Size(int value_size, int grow)
 }
 
 template<class T>
-int MyArray<T>::Get_Upper_Bound(int value_size)
+int MyArray<T>::Get_Upper_Bound(int value_size) // method to get the last valid index
 {
 	return size - 1;
 }
 
 template<class T>
-bool MyArray<T>::IsEmpty()
+bool MyArray<T>::IsEmpty() // array check method is empty or not
 {
 	if (size == 0) {
 		return true;
@@ -111,7 +111,7 @@ bool MyArray<T>::IsEmpty()
 }
 
 template<class T>
-void MyArray<T>::FreeExtra()
+void MyArray<T>::FreeExtra() // method removes extra memory
 {
 	if (size < capacity) {
 		capacity = capacity - size;
@@ -119,39 +119,39 @@ void MyArray<T>::FreeExtra()
 }
 
 template<class T>
-void MyArray<T>::RemoveAll()
+void MyArray<T>::RemoveAll() // delete all
 {
 	size = 0;
 	capacity = 0;
 }
 
 template<class T>
-int MyArray<T>::GetAt(int index)
+int MyArray<T>::GetAt(int index) // method to get a specific element by index
 {
 	return arr[index];
 }
 
 template<class T>
-void MyArray<T>::SetAt(int index, T number)
+void MyArray<T>::SetAt(int index, T number) // method to add a new value for a specific index
 {
 	arr[index] = number;
 }
 
 template<class T>
-int MyArray<T>::operator[](int index)
+int MyArray<T>::operator[](int index) // operator []
 {
 	return arr[index];
 }
 
 template<class T>
-void MyArray<T>::Add(T number)
+void MyArray<T>::Add(T number) // method to add an element to an array
 {
 	Set_Size(size + 1, 1);
 	arr[size - 1] = number;
 }
 
 template<class T>
-void MyArray<T>::Append(MyArray<T>& value_arr)
+void MyArray<T>::Append(MyArray<T>& value_arr) // array addition method arr + arr2
 {
 	int temp = size + value_arr.size;
 	Set_Size(temp, value_arr.size);
@@ -162,13 +162,13 @@ void MyArray<T>::Append(MyArray<T>& value_arr)
 }
 
 template<class T>
-T* MyArray<T>::Get_Data()
+T* MyArray<T>::Get_Data() // getter return address of the array
 {
 	return arr;
 }
 
 template<class T>
-void MyArray<T>::Insert_At(MyArray& value_arr, int index)
+void MyArray<T>::Insert_At(MyArray& value_arr, int index) // method inserts an element at a specific position
 {
 	MyArray<T> obj(*arr);
 	for (int i = 0; i < size; i++)
@@ -188,7 +188,7 @@ void MyArray<T>::Insert_At(MyArray& value_arr, int index)
 }
 
 template<class T>
-inline void MyArray<T>::Remove_Ar(int index1, int index2)
+inline void MyArray<T>::Remove_Ar(int index1, int index2) // method to remove an element from a specific position
 {
 	MyArray<T> obj(arr);
 	for (int i = 0; i < size; i++)
@@ -204,7 +204,7 @@ inline void MyArray<T>::Remove_Ar(int index1, int index2)
 }
 
 template<class T>
-MyArray<T>::~MyArray()
+MyArray<T>::~MyArray() // destructor
 {
 	delete[] arr;
 	size = 0;
@@ -212,7 +212,7 @@ MyArray<T>::~MyArray()
 }
 
 template<class T>
-MyArray<T>& MyArray<T>::operator=(const MyArray& obj)
+MyArray<T>& MyArray<T>::operator=(const MyArray& obj) // assignment method
 {
 	if (this == &obj) {
 		return *this;
