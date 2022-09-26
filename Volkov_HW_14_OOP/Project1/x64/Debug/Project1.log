@@ -1,0 +1,4 @@
+﻿  forward_list.cpp
+C:\Users\User\Desktop\Project1\Project1\forward_list.cpp(199,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\User\Desktop\Project1\Project1\forward_list.cpp(208,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Project1.vcxproj -> C:\Users\User\Desktop\Project1\x64\Debug\Project1.exe
