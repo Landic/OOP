@@ -1,0 +1,7 @@
+﻿  ForeignPassport.cpp
+C:\Users\User\Desktop\OOP\Volkov_HW_17_OOP\Volkov_HW_17_OOP\ForeignPassport.cpp(26,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Passport.cpp
+C:\Users\User\Desktop\OOP\Volkov_HW_17_OOP\Volkov_HW_17_OOP\Passport.cpp(47,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  main.cpp
+  Generating Code...
+  Volkov_HW_17_OOP.vcxproj -> C:\Users\User\Desktop\OOP\Volkov_HW_17_OOP\x64\Debug\Volkov_HW_17_OOP.exe
