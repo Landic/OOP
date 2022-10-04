@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Square::Square(double value_side)
+Square::Square(double value_side) // constructor by parametres
 {
 	side = value_side;
 }

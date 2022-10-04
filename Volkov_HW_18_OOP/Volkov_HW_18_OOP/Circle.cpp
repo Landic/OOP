@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Circle::Circle(double value_rad)
+Circle::Circle(double value_rad) // constructor by parametres
 {
 	rad = value_rad;
 }

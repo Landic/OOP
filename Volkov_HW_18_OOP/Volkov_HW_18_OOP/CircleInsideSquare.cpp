@@ -6,8 +6,8 @@ CircleInsideSquare::CircleInsideSquare(double value_rad, double value_side):Circ
 
 bool CircleInsideSquare::Check()
 {
-	if (rad < side / 2) {
-		return true;
+	if (rad < side / 2) { // check circle inside or not
+		return true; // circle inside return true
 	}
-	return false;
+	return false; // return false circle not inside square
 }

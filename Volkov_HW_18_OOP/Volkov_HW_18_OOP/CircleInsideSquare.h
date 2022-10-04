@@ -5,8 +5,8 @@
 class CircleInsideSquare : public Circle, public Square
 {
 public:
-	CircleInsideSquare() = default;
-	CircleInsideSquare(double value_rad, double value_side);
-	bool Check();
+	CircleInsideSquare() = default; // constructor default
+	CircleInsideSquare(double value_rad, double value_side); // constructor by parametres
+	bool Check(); // method check circle in square
 };
 
