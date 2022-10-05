@@ -16,21 +16,6 @@ Transport::Transport(int value_year, string value_model)
 	model = value_model;
 }
 
-void Transport::Init()
-{
-	cout << "Enter fuel volum" << endl;
-	cout << "Enter... ";
-	cin >> fuel_volum;
-	system("cls");
-	cout << "Enter model" << endl;
-	cout << "Enter... ";
-	cin >> model;
-	system("cls");
-	cout << "Enter year" << endl;
-	cout << "Enter... ";
-	cin >> year;
-	system("cls");
-}
 
 void Transport::SetTransport(const float value_fuel_volum, const string value_model, const int value_year)
 {
@@ -39,7 +24,3 @@ void Transport::SetTransport(const float value_fuel_volum, const string value_mo
 	year = value_year;
 }
 
-void Transport::Show() const
-{
-	cout << "No transport" << endl;
-}

@@ -13,8 +13,8 @@ public:
 	Transport() = default;
 	Transport(float value_fuel_volum, int value_year, string value_model);
 	Transport(int value_year, string value_model);
-	virtual void Init();
+	virtual void Init() = 0;
 	void SetTransport(const float value_fuel_volum, const string value_model, const int value_year);
-	virtual void Show() const;
+	virtual void Show() const = 0;
 };
 

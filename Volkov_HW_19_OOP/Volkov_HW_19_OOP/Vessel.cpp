@@ -18,7 +18,18 @@ void Vessel::Show() const
 
 void Vessel::Init()
 {
-	Transport::Init();
+	cout << "Enter fuel volum" << endl;
+	cout << "Enter... ";
+	cin >> fuel_volum;
+	system("cls");
+	cout << "Enter model" << endl;
+	cout << "Enter... ";
+	cin >> model;
+	system("cls");
+	cout << "Enter year" << endl;
+	cout << "Enter... ";
+	cin >> year;
+	system("cls");
 	cout << "Enter type vessel" << endl;
 	cout << "Enter... ";
 	cin >> type_vessel;

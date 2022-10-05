@@ -18,7 +18,18 @@ void Truck::Show() const
 
 void Truck::Init()
 {
-	Transport::Init();
+	cout << "Enter fuel volum" << endl;
+	cout << "Enter... ";
+	cin >> fuel_volum;
+	system("cls");
+	cout << "Enter model" << endl;
+	cout << "Enter... ";
+	cin >> model;
+	system("cls");
+	cout << "Enter year" << endl;
+	cout << "Enter... ";
+	cin >> year;
+	system("cls");
 	cout << "Enter cargo type" << endl;
 	cout << "Enter... ";
 	cin >> cargo_type;

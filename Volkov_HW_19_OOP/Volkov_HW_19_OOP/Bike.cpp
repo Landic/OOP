@@ -17,7 +17,16 @@ void Bike::Show() const
 
 void Bike::Init()
 {
-	Transport::Init();
+	cin >> fuel_volum;
+	system("cls");
+	cout << "Enter model" << endl;
+	cout << "Enter... ";
+	cin >> model;
+	system("cls");
+	cout << "Enter year" << endl;
+	cout << "Enter... ";
+	cin >> year;
+	system("cls");
 	cout << "Enter number of gears" << endl;
 	cout << "Enter... ";
 	cin >> number_gears;
