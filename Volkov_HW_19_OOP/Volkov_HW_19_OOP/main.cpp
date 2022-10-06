@@ -38,6 +38,7 @@ int main() {
 	system("CLS");
 	ptr->Init();
 	ptr->Show();
+	delete[] ptr;
 }
 
 void Print_Menu()

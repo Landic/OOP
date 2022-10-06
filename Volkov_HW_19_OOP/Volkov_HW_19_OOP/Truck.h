@@ -2,11 +2,12 @@
 #include "Transport.h"
 class Truck : public Transport
 {
-	string cargo_type;
+	char* cargo_type;
 public:
 	Truck() = default;
-	Truck(float value_fuel_volum, int value_year, string value_model, string value_cargo_type);
+	Truck(float value_fuel_volum, int value_year, char* value_model, char* value_cargo_type);
 	void Show() const;
 	void Init();
+	~Truck();
 };
 

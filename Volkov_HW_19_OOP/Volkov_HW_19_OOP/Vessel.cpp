@@ -3,9 +3,10 @@
 
 using namespace std;
 
-Vessel::Vessel(float value_fuel_volum, int value_year, string value_model, string value_type_vessel):Transport(value_fuel_volum, value_year, value_model)
+Vessel::Vessel(float value_fuel_volum, int value_year, char* value_model, char* value_type_vessel):Transport(value_fuel_volum, value_year, value_model)
 {
-	type_vessel = value_type_vessel;
+	type_vessel = new char[strlen(value_type_vessel) + 1];
+	strcpy_s(type_vessel, strlen(value_type_vessel) + 1, value_type_vessel);
 }
 
 void Vessel::Show() const
@@ -18,20 +19,22 @@ void Vessel::Show() const
 
 void Vessel::Init()
 {
-	cout << "Enter fuel volum" << endl;
-	cout << "Enter... ";
-	cin >> fuel_volum;
-	system("cls");
-	cout << "Enter model" << endl;
-	cout << "Enter... ";
-	cin >> model;
-	system("cls");
-	cout << "Enter year" << endl;
-	cout << "Enter... ";
-	cin >> year;
-	system("cls");
+	Transport::Init();
+	char temporarily[20];
 	cout << "Enter type vessel" << endl;
 	cout << "Enter... ";
-	cin >> type_vessel;
-	system("CLS");
+	cin >> temporarily;
+	if (type_vessel != nullptr) {
+		cout << type_vessel << " remove!" << endl;
+		delete[] type_vessel;
+	}
+	type_vessel = new char[strlen(temporarily) + 1];
+	strcpy_s(type_vessel, strlen(temporarily) + 1, temporarily);
+	system("cls");
+}
+
+Vessel::~Vessel()
+{
+	cout << "Destructor Vessel" << endl;
+	delete[] type_vessel;
 }

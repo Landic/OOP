@@ -3,9 +3,10 @@
 
 using namespace std;
 
-Truck::Truck(float value_fuel_volum, int value_year, string value_model, string value_cargo_type):Transport(value_fuel_volum, value_year, value_model)
+Truck::Truck(float value_fuel_volum, int value_year, char* value_model, char* value_cargo_type):Transport(value_fuel_volum, value_year, value_model)
 {
-	cargo_type = value_cargo_type;
+	cargo_type = new char[strlen(value_cargo_type) + 1];
+	strcpy_s(cargo_type, strlen(value_cargo_type) + 1, value_cargo_type);
 }
 
 void Truck::Show() const
@@ -18,20 +19,22 @@ void Truck::Show() const
 
 void Truck::Init()
 {
-	cout << "Enter fuel volum" << endl;
-	cout << "Enter... ";
-	cin >> fuel_volum;
-	system("cls");
-	cout << "Enter model" << endl;
-	cout << "Enter... ";
-	cin >> model;
-	system("cls");
-	cout << "Enter year" << endl;
-	cout << "Enter... ";
-	cin >> year;
-	system("cls");
+	Transport::Init();
+	char temporarily[20];
 	cout << "Enter cargo type" << endl;
 	cout << "Enter... ";
-	cin >> cargo_type;
-	system("Cls");
+	cin >> temporarily;
+	if (cargo_type != nullptr) {
+		cout << cargo_type << " remove!" << endl;
+		delete[] cargo_type;
+	}
+	cargo_type = new char[strlen(temporarily) + 1];
+	strcpy_s(cargo_type, strlen(temporarily) + 1, temporarily);
+	system("cls");
+}
+
+Truck::~Truck()
+{
+	cout << "Destructor Truck" << endl;
+	delete[] cargo_type;
 }
