@@ -3,14 +3,14 @@
 
 using namespace std;
 
-Plane::Plane(float value_fuel_volum, int value_year, char* value_model, float value_mass, char* value_type_engine):Transport(value_fuel_volum, value_year, value_model)
+plane::Plane::Plane(float value_fuel_volum, int value_year, char* value_model, float value_mass, char* value_type_engine):Transport(value_fuel_volum, value_year, value_model)
 {
 	mass = value_mass;
 	type_engine = new char[strlen(value_type_engine) + 1];
 	strcpy_s(type_engine, strlen(value_type_engine) + 1, value_type_engine);
 }
 
-void Plane::Show() const
+void plane::Plane::Show() const
 {
 	cout << "Model: " << model << endl;
 	cout << "Year: " << year << endl;
@@ -19,7 +19,7 @@ void Plane::Show() const
 	cout << "Type engine: " << type_engine << endl;
 }
 
-void Plane::Init() {
+void plane::Plane::Init() {
 	Transport::Init();
 	cout << "Enter mass" << endl;
 	cout << "Enter... ";
@@ -38,7 +38,7 @@ void Plane::Init() {
 	system("cls");
 }
 
-Plane::~Plane()
+plane::Plane::~Plane()
 {
 	cout << "Destructor Plane" << endl;
 	delete[] type_engine;

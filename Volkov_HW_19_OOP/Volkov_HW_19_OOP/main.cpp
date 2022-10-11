@@ -7,6 +7,12 @@
 #include "Vessel.h"
 
 using namespace std;
+using namespace transport;
+using namespace jeep;
+using namespace plane;
+using namespace bike;
+using namespace truck;
+using namespace vessel;
 
 void Print_Menu();
 

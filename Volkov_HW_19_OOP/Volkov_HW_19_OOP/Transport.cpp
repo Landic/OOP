@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Transport::Transport(float value_fuel_volum, int value_year, char* value_model)
+transport::Transport::Transport(float value_fuel_volum, int value_year, char* value_model)
 {
 	fuel_volum = value_fuel_volum;
 	year = value_year;
@@ -11,14 +11,14 @@ Transport::Transport(float value_fuel_volum, int value_year, char* value_model)
 	strcpy_s(model, strlen(value_model) + 1, value_model);
 }
 
-Transport::Transport(int value_year, char* value_model)
+transport::Transport::Transport(int value_year, char* value_model)
 {
 	year = value_year;
 	model = new char[strlen(value_model) + 1];
 	strcpy_s(model, strlen(value_model) + 1, value_model);
 }
 
-void Transport::Init()
+void transport::Transport::Init()
 {
 	cout << "Enter fuel volum" << endl;
 	cout << "Enter... ";
@@ -42,7 +42,7 @@ void Transport::Init()
 }
 
 
-void Transport::SetTransport(const float value_fuel_volum, const char* value_model, const int value_year)
+void transport::Transport::SetTransport(const float value_fuel_volum, const char* value_model, const int value_year)
 {
 	fuel_volum = value_fuel_volum;
 	model = new char[strlen(value_model) + 1];
@@ -50,12 +50,12 @@ void Transport::SetTransport(const float value_fuel_volum, const char* value_mod
 	year = value_year;
 }
 
-void Transport::Show() const
+void transport::Transport::Show() const
 {
 	cout << "No transport" << endl;
 }
 
-Transport::~Transport() {
+transport::Transport::~Transport() {
 	cout << "Destructor Transport" << endl;
 	delete[] model;
 	year = 0;

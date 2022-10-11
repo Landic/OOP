@@ -3,13 +3,13 @@
 
 using namespace std;
 
-Vessel::Vessel(float value_fuel_volum, int value_year, char* value_model, char* value_type_vessel):Transport(value_fuel_volum, value_year, value_model)
+vessel::Vessel::Vessel(float value_fuel_volum, int value_year, char* value_model, char* value_type_vessel):Transport(value_fuel_volum, value_year, value_model)
 {
 	type_vessel = new char[strlen(value_type_vessel) + 1];
 	strcpy_s(type_vessel, strlen(value_type_vessel) + 1, value_type_vessel);
 }
 
-void Vessel::Show() const
+void vessel::Vessel::Show() const
 {
 	cout << "Model: " << model << endl;
 	cout << "Year: " << year << endl;
@@ -17,7 +17,7 @@ void Vessel::Show() const
 	cout << "Fuel volum: " << fuel_volum << endl;
 }
 
-void Vessel::Init()
+void vessel::Vessel::Init()
 {
 	Transport::Init();
 	char temporarily[20];
@@ -33,7 +33,7 @@ void Vessel::Init()
 	system("cls");
 }
 
-Vessel::~Vessel()
+vessel::Vessel::~Vessel()
 {
 	cout << "Destructor Vessel" << endl;
 	delete[] type_vessel;

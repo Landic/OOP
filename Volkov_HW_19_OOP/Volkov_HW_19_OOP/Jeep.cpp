@@ -4,13 +4,13 @@
 
 using namespace std;
 
-Jeep::Jeep(float value_fuel_volum, int value_year, char* value_model, char* value_drive_unit):Transport(value_fuel_volum,value_year, value_model)
+jeep::Jeep::Jeep(float value_fuel_volum, int value_year, char* value_model, char* value_drive_unit):Transport(value_fuel_volum,value_year, value_model)
 {
 	drive_unit = new char[strlen(value_drive_unit) + 1];
 	strcpy_s(drive_unit, strlen(value_drive_unit) + 1, value_drive_unit);
 }
 
-void Jeep::Show() const
+void jeep::Jeep::Show() const
 {
 	cout << "Model: " << model << endl;
 	cout << "Year: " << year << endl;
@@ -18,7 +18,7 @@ void Jeep::Show() const
 	cout << "Fuel volume: " << fuel_volum << endl;
 }
 
-void Jeep::Init()
+void jeep::Jeep::Init()
 {
 	Transport::Init();
 	char temporarily[20];
@@ -34,7 +34,7 @@ void Jeep::Init()
 	system("cls");
 }
 
-Jeep::~Jeep()
+jeep::Jeep::~Jeep()
 {
 	cout << "Destructor Jeep" << endl;
 	delete[] drive_unit;

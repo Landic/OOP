@@ -3,13 +3,13 @@
 
 using namespace std;
 
-Truck::Truck(float value_fuel_volum, int value_year, char* value_model, char* value_cargo_type):Transport(value_fuel_volum, value_year, value_model)
+truck::Truck::Truck(float value_fuel_volum, int value_year, char* value_model, char* value_cargo_type):Transport(value_fuel_volum, value_year, value_model)
 {
 	cargo_type = new char[strlen(value_cargo_type) + 1];
 	strcpy_s(cargo_type, strlen(value_cargo_type) + 1, value_cargo_type);
 }
 
-void Truck::Show() const
+void truck::Truck::Show() const
 {
 	cout << "Model: " << model << endl;
 	cout << "Year: " << year << endl;
@@ -17,7 +17,7 @@ void Truck::Show() const
 	cout << "Fuel volum: " << fuel_volum << endl;
 }
 
-void Truck::Init()
+void truck::Truck::Init()
 {
 	Transport::Init();
 	char temporarily[20];
@@ -33,7 +33,7 @@ void Truck::Init()
 	system("cls");
 }
 
-Truck::~Truck()
+truck::Truck::~Truck()
 {
 	cout << "Destructor Truck" << endl;
 	delete[] cargo_type;

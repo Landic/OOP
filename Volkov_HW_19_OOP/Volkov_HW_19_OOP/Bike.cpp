@@ -3,14 +3,14 @@
 
 using namespace std;
 
-Bike::Bike(int value_year, char* value_model, short value_number_gears, char* value_type_brake):Transport(value_year, value_model)
+bike::Bike::Bike(int value_year, char* value_model, short value_number_gears, char* value_type_brake):Transport(value_year, value_model)
 {
 	number_gears = value_number_gears;
 	type_brake = new char[strlen(value_type_brake) + 1];
 	strcpy_s(type_brake, strlen(value_type_brake) + 1, value_type_brake);
 }
 
-void Bike::Show() const
+void bike::Bike::Show() const
 {
 	cout << "Model: " << model << endl;
 	cout << "Year: " << year << endl;
@@ -18,7 +18,7 @@ void Bike::Show() const
 	cout << "Type brake: " << type_brake << endl;
 }
 
-void Bike::Init()
+void bike::Bike::Init()
 {
 	Transport::Init();
 	cout << "Enter number of gears" << endl;
@@ -38,7 +38,7 @@ void Bike::Init()
 	system("cls");
 }
 
-Bike::~Bike()
+bike::Bike::~Bike()
 {
 	cout << "Destructor Bike" << endl;
 	delete[] type_brake;
