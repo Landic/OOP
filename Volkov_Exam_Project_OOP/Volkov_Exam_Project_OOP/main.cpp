@@ -36,8 +36,8 @@ int main() {
 	short choose, hour;
 	LoginForAdmin login_admin;
 	LoginForUser login_user;
-	UserComputerClub b;
-	AdminComputerClub a;
+	UserComputerClub user;
+	AdminComputerClub admin;
 	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	// МЕНЮ
 	while (true) {
@@ -102,17 +102,25 @@ int main() {
 								cout << "Enter... ";
 								cin >> choose;
 								system("cls");
-								if (choose >= 1 && choose <= 3) {
-									cout << " -------------------------------" << endl;
-									cout << "|Enter your hour |minimum 1 hour|" << endl;
-									cout << " -------------------------------" << endl;
-									cout << "Enter... ";
-									cin >> hour;
+								switch (choose) {
+								case 1:
+									user.Borrow_Weak_Computer(admin);
 									system("cls");
-									b.Borrow_Computer(hour, choose, a);
 									continue;
-								}
-								else {
+								case 2:
+									user.Borrow_Average_Computer(admin);
+									system("cls");
+									continue;
+								case 3:
+									user.Borrow_Powerful_Computer(admin);
+									system("cls");
+									continue;
+								default:
+									cout << " --------------" << endl;
+									cout << "|Invalid input!|" << endl;
+									cout << " --------------" << endl;
+									Sleep(1000);
+									system("cls");
 									continue;
 								}
 							case 2:
@@ -136,18 +144,30 @@ int main() {
 								cout << "Enter... ";
 								cin >> choose;
 								system("cls");
-								if (choose >= 1 && choose <= 3) {
-									b.Release_The_Computer(choose, a);
+								switch (choose) {
+								case 1:
+									user.Release_The_Weak_Computer(admin);
+									system("cls");
+									continue;
+								case 2:
+									user.Release_The_Average_Computer(admin);
+									system("cls");
+									continue;
+								case 3:
+									user.Release_The_Powerful_Computer(admin);
+									system("cls");
+									continue;
+								default:
+									cout << " --------------" << endl;
+									cout << "|Invalid input!|" << endl;
+									cout << " --------------" << endl;
+									Sleep(1000);
 									system("cls");
 									continue;
 								}
-								else{
-									continue;
-								}
-
 								continue;
 							case 3:
-								b.Output();
+								user.Output();
 								cout << "1. Back" << endl;
 								cin >> choose;
 								if (choose == 1) {
@@ -158,6 +178,13 @@ int main() {
 								Sleep(1000);
 								system("cls");
 								break;
+							default:
+								cout << " --------------" << endl;
+								cout << "|Invalid input!|" << endl;
+								cout << " --------------" << endl;
+								Sleep(1000);
+								system("cls");
+								continue;
 							}
 							break;
 						}
@@ -172,6 +199,13 @@ int main() {
 					continue;
 				case 3:
 					break;
+				default:
+					cout << " --------------" << endl;
+					cout << "|Invalid input!|" << endl;
+					cout << " --------------" << endl;
+					Sleep(1000);
+					system("cls");
+					continue;
 				}
 				break;
 			}
@@ -199,7 +233,7 @@ int main() {
 						system("cls");
 						switch (choose) {
 						case 1:
-							a.Output();
+							admin.Output();
 							cout << "1. Back" << endl;
 							cin >> choose;
 							if (choose == 1) {
@@ -224,15 +258,29 @@ int main() {
 							cout << "Enter... ";
 							cin >> choose;
 							system("cls");
-							if (choose >= 1 && choose <= 3) {
-								a.Buy_Computer(choose);
+							switch (choose) {
+							case 1:
+								admin.Buy_Weak_Computer();
+								system("cls");
 								continue;
-							}
-							else {
+							case 2:
+								admin.Buy_Average_Computer();
+								system("cls");
+								continue;
+							case 3:
+								admin.Buy_Powerful_Computer();
+								system("cls");
+								continue;
+							default:
+								cout << " --------------" << endl;
+								cout << "|Invalid input!|" << endl;
+								cout << " --------------" << endl;
+								Sleep(1000);
+								system("cls");
 								continue;
 							}
 						case 3:
-							a.Computer_Is_Busy();
+							admin.Computer_Is_Busy();
 							SetConsoleTextAttribute(hStdOut, 15);
 							cout << "|1. Back               |" << endl;
 							cout << " ----------------------" << endl;
@@ -260,11 +308,25 @@ int main() {
 							cout << "Enter... ";
 							cin >> choose;
 							system("cls");
-							if (choose >= 1 && choose <= 3) {
-								a.Sell_Computer(choose);
+							switch (choose) {
+							case 1:
+								admin.Sell_Weak_Computer();
+								system("cls");
 								continue;
-							}
-							else {
+							case 2:
+								admin.Sell_Average_Computer();
+								system("cls");
+								continue;
+							case 3:
+								admin.Sell_Powerful_Computer();
+								system("cls");
+								continue;
+							default:
+								cout << " --------------" << endl;
+								cout << "|Invalid input!|" << endl;
+								cout << " --------------" << endl;
+								Sleep(1000);
+								system("cls");
 								continue;
 							}
 						case 5:
@@ -272,7 +334,15 @@ int main() {
 							Sleep(1000);
 							system("cls");
 							break;
+						default:
+							cout << " --------------" << endl;
+							cout << "|Invalid input!|" << endl;
+							cout << " --------------" << endl;
+							Sleep(1000);
+							system("cls");
+							continue;
 						}
+
 						break;
 					}
 				}
@@ -286,9 +356,23 @@ int main() {
 				continue;
 			case 3:
 				continue;
+			default:
+				cout << " --------------" << endl;
+				cout << "|Invalid input!|" << endl;
+				cout << " --------------" << endl;
+				Sleep(1000);
+				system("cls");
+				continue;
 			}
 		case 3:
 			break;
+		default:
+			cout << " --------------" << endl;
+			cout << "|Invalid input!|" << endl;
+			cout << " --------------" << endl;
+			Sleep(1000);
+			system("cls");
+			continue;
 		}
 		break;
 	}

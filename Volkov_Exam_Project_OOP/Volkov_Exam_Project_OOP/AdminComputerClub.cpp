@@ -12,82 +12,84 @@ AdminComputerClub::AdminComputerClub()
 	profit = 0;
 }
 
-void AdminComputerClub::Buy_Computer(short choose)
+void AdminComputerClub::Buy_Weak_Computer()
 {
-	if (choose == 1) {
-		if (balance < 450) { // если баланс меньше стоимости компьютера то на экран выведется сообщение
-			cout << " -----------------------------------------" << endl;
-			cout << "|You dont have money to buy this computer!|" << endl;
-			cout << " -----------------------------------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else if(weak_computer.size() == 3){ // если больше 3 слабых компьютеров то ошибка максимум можно купить 3
-			cout << " ----------------------------------------------" << endl;
-			cout << "|You can not buy more than three weak computers|" << endl;
-			cout << " ----------------------------------------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else { // если все нормально срабатывает блок кода ниже
-			cout << " ---------" << endl;
-			cout << "|Buying...|" << endl;
-			cout << " ---------" << endl;
-			balance -= 450;
-			weak_computer.push_back(0);
-			Sleep(1000);
-			system("cls");
-		}
+	if (balance < 450) { // если баланс меньше стоимости компьютера то на экран выведется сообщение
+		cout << " -----------------------------------------" << endl;
+		cout << "|You dont have money to buy this computer!|" << endl;
+		cout << " -----------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
 	}
-	if (choose == 2) {
-		if (balance < 900) { // если баланс меньше стоимости ошибка
-			cout << " -----------------------------------------" << endl;
-			cout << "|You dont have money to buy this computer!|" << endl;
-			cout << " -----------------------------------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else if (average_computer.size() == 2) { // если уже куплено 2 средних компьютера то ошибка максимум можно 2
-			cout << " ---------------------------------------------" << endl;
-			cout << "|You can't buy more than two average computers|" << endl;
-			cout << " ---------------------------------------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else { // если все нормально срабатывает блок ниже
-			cout << " ---------" << endl;
-			cout << "|Buying...|" << endl;
-			cout << " ---------" << endl;
-			balance -= 900;
-			average_computer.push_back(0);
-			Sleep(1000);
-			system("cls");
-		}
+	else if (weak_computer.size() == 3) { // если больше 3 слабых компьютеров то ошибка максимум можно купить 3
+		cout << " ----------------------------------------------" << endl;
+		cout << "|You can not buy more than three weak computers|" << endl;
+		cout << " ----------------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
 	}
-	if (choose == 3) { 
-		if (balance < 1500) { // если баланс меньше стоимости ошибка
-			cout << " -----------------------------------------" << endl;
-			cout << "|You dont have money to buy this computer!|" << endl;
-			cout << " -----------------------------------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else if (powerful_computer.size() == 1) { // если уже куплено 1 мощный компьютер то ошибка максимум можно 2
-			cout << " -----------------------------------------------" << endl;
-			cout << "|You can not buy more than one powerful computer|" << endl;
-			cout << " -----------------------------------------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else { // если все нормально срабатывает блок ниже
-			cout << " ---------" << endl;
-			cout << "|Buying...|" << endl;
-			cout << " ---------" << endl;
-			balance -= 1500;
-			powerful_computer.push_back(0);
-			Sleep(1000);
-			system("cls");
-		}
+	else { // если все нормально срабатывает блок кода ниже
+		cout << " ---------" << endl;
+		cout << "|Buying...|" << endl;
+		cout << " ---------" << endl;
+		balance -= 450;
+		weak_computer.push_back(0);
+		Sleep(1000);
+		system("cls");
+	}
+}
+
+void AdminComputerClub::Buy_Average_Computer()
+{
+	if (balance < 900) { // если баланс меньше стоимости ошибка
+		cout << " -----------------------------------------" << endl;
+		cout << "|You dont have money to buy this computer!|" << endl;
+		cout << " -----------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else if (average_computer.size() == 2) { // если уже куплено 2 средних компьютера то ошибка максимум можно 2
+		cout << " ---------------------------------------------" << endl;
+		cout << "|You can't buy more than two average computers|" << endl;
+		cout << " ---------------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else { // если все нормально срабатывает блок ниже
+		cout << " ---------" << endl;
+		cout << "|Buying...|" << endl;
+		cout << " ---------" << endl;
+		balance -= 900;
+		average_computer.push_back(0);
+		Sleep(1000);
+		system("cls");
+	}
+}
+
+void AdminComputerClub::Buy_Powerful_Computer()
+{
+	if (balance < 1500) { // если баланс меньше стоимости ошибка
+		cout << " -----------------------------------------" << endl;
+		cout << "|You dont have money to buy this computer!|" << endl;
+		cout << " -----------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else if (powerful_computer.size() == 1) { // если уже куплено 1 мощный компьютер то ошибка максимум можно 2
+		cout << " -----------------------------------------------" << endl;
+		cout << "|You can not buy more than one powerful computer|" << endl;
+		cout << " -----------------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else { // если все нормально срабатывает блок ниже
+		cout << " ---------" << endl;
+		cout << "|Buying...|" << endl;
+		cout << " ---------" << endl;
+		balance -= 1500;
+		powerful_computer.push_back(0);
+		Sleep(1000);
+		system("cls");
 	}
 }
 
@@ -122,61 +124,84 @@ void AdminComputerClub::Output()
 	cout << " --------------------------" << endl;
 }
 
-void AdminComputerClub::Sell_Computer(short choose)
+void AdminComputerClub::Sell_Weak_Computer()
 {
-	if (choose == 1) {
-		if (weak_computer.size() == 0) { // если нету компьютеров и продать их выдаст ошибка
-			cout << " ----------------" << endl;
-			cout << "|Not availability|" << endl;
-			cout << " ----------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else { // если все нормально продается один пк из 3 и прибавляется половина суммы
-			cout << " ----------" << endl;
-			cout << "|Selling...|" << endl;
-			cout << " ----------" << endl;
-			balance += 250;
-			weak_computer.erase(weak_computer.end() - 1);
-			Sleep(1000);
-			system("cls");
-		}
+	if (weak_computer[0] == 1 || weak_computer[1] == 1 || weak_computer[2] == 1) {
+		cout << " ------------------------------------------" << endl;
+		cout << "|You can't sell a computer while it's busy!|" << endl;
+		cout << " ------------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
 	}
-	if (choose == 2) {
-		if (average_computer.size() == 0) {  // если нету компьютеров и продать их выдаст ошибка
-			cout << " ----------------" << endl;
-			cout << "|Not availability|" << endl;
-			cout << " ----------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else { // если все нормально продается один пк из 2 и прибавляется половина суммы
-			cout << " ----------" << endl;
-			cout << "|Selling...|" << endl;
-			cout << " ----------" << endl;
-			balance += 400;
-			average_computer.erase(average_computer.end() - 1);
-			Sleep(1000);
-			system("cls");
-		}
+	else if (weak_computer.size() == 0) { // если нету компьютеров и продать их выдаст ошибка
+		cout << " ----------------" << endl;
+		cout << "|Not availability|" << endl;
+		cout << " ----------------" << endl;
+		Sleep(1000);
+		system("cls");
 	}
-	if (choose == 3) { // если нету компьютеров и продать их выдаст ошибка
-		if (powerful_computer.size() == 0) {
-			cout << " ----------------" << endl;
-			cout << "|Not availability|" << endl;
-			cout << " ----------------" << endl;
-			Sleep(1000);
-			system("cls");
-		}
-		else { // если все нормально продается один пк из 1 и прибавляется половина суммы
-			cout << " ----------" << endl;
-			cout << "|Selling...|" << endl;
-			cout << " ----------" << endl;
-			balance += 750;
-			powerful_computer.erase(powerful_computer.end() - 1);
-			Sleep(1000);
-			system("cls");
-		}
+	else { // если все нормально продается один пк из 3 и прибавляется половина суммы
+		cout << " ----------" << endl;
+		cout << "|Selling...|" << endl;
+		cout << " ----------" << endl;
+		balance += 250;
+		weak_computer.erase(weak_computer.end() - 1);
+		Sleep(1000);
+		system("cls");
+	}
+}
+
+void AdminComputerClub::Sell_Average_Computer()
+{
+	if (average_computer[0] == 1 || average_computer[1] == 1) {
+		cout << " ------------------------------------------" << endl;
+		cout << "|You can't sell a computer while it's busy!|" << endl;
+		cout << " ------------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else if (average_computer.size() == 0) {  // если нету компьютеров и продать их выдаст ошибка
+		cout << " ----------------" << endl;
+		cout << "|Not availability|" << endl;
+		cout << " ----------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else { // если все нормально продается один пк из 2 и прибавляется половина суммы
+		cout << " ----------" << endl;
+		cout << "|Selling...|" << endl;
+		cout << " ----------" << endl;
+		balance += 400;
+		average_computer.erase(average_computer.end() - 1);
+		Sleep(1000);
+		system("cls");
+	}
+}
+
+void AdminComputerClub::Sell_Powerful_Computer()
+{
+	if (powerful_computer[0] == 1) {
+		cout << " ------------------------------------------" << endl;
+		cout << "|You can't sell a computer while it's busy!|" << endl;
+		cout << " ------------------------------------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else if (powerful_computer.size() == 0) {
+		cout << " ----------------" << endl;
+		cout << "|Not availability|" << endl;
+		cout << " ----------------" << endl;
+		Sleep(1000);
+		system("cls");
+	}
+	else { // если все нормально продается один пк из 1 и прибавляется половина суммы
+		cout << " ----------" << endl;
+		cout << "|Selling...|" << endl;
+		cout << " ----------" << endl;
+		balance += 750;
+		powerful_computer.erase(powerful_computer.end() - 1);
+		Sleep(1000);
+		system("cls");
 	}
 }
 

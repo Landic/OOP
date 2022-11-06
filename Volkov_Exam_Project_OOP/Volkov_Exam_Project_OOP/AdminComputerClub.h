@@ -8,9 +8,13 @@ class AdminComputerClub : public ComputerClub
 	float profit;
 public:
 	AdminComputerClub(); // конструктор по умолчанию
-	void Buy_Computer(short choose); // метод для покупки пк
+	void Buy_Weak_Computer(); // метод для покупки пк
+	void Buy_Average_Computer(); // метод для покупки пк
+	void Buy_Powerful_Computer(); // метод для покупки пк
 	void Output(); // вывод
-	void Sell_Computer(short choose); // метод для продажи пк
+	void Sell_Weak_Computer(); // метод для продажи пк
+	void Sell_Average_Computer(); // метод для продажи пк
+	void Sell_Powerful_Computer(); // метод для продажи пк
 	void Computer_Is_Busy(); // вывод всех компьютеров и просмотр их заняты они или нет
 	// АКСЕССОРЫ
 	int Get_Weak_Computer_Size();
