@@ -126,7 +126,7 @@ void AdminComputerClub::Output()
 
 void AdminComputerClub::Sell_Weak_Computer()
 {
-	if (weak_computer[0] == 1 || weak_computer[1] == 1 || weak_computer[2] == 1) {
+	if (weak_computer[0] == 1 /*|| weak_computer[1] == 1 || weak_computer[2] == 1*/) {
 		cout << " ------------------------------------------" << endl;
 		cout << "|You can't sell a computer while it's busy!|" << endl;
 		cout << " ------------------------------------------" << endl;

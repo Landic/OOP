@@ -1,3 +1,5 @@
-﻿  main.cpp
-C:\Users\User\Desktop\OOP\Volkov_Exam_Project_OOP\Volkov_Exam_Project_OOP\main.cpp(36,16): warning C4101: 'hour': unreferenced local variable
+﻿  AdminComputerClub.cpp
+C:\Users\User\Desktop\OOP\Volkov_Exam_Project_OOP\Volkov_Exam_Project_OOP\AdminComputerClub.cpp(257,29): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Desktop\OOP\Volkov_Exam_Project_OOP\Volkov_Exam_Project_OOP\AdminComputerClub.cpp(262,32): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Desktop\OOP\Volkov_Exam_Project_OOP\Volkov_Exam_Project_OOP\AdminComputerClub.cpp(267,33): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   Volkov_Exam_Project_OOP.vcxproj -> C:\Users\User\Desktop\OOP\Volkov_Exam_Project_OOP\x64\Debug\Volkov_Exam_Project_OOP.exe

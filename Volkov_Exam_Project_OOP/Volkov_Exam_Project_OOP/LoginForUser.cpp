@@ -54,8 +54,8 @@ void LoginForUser::Register()
 	password = "password_user.txt";
 	fstream login_file;
 	fstream password_file;
-	login_file.open(login, fstream::in | fstream::out | fstream::app);
-	password_file.open(password, fstream::in | fstream::out | fstream::app);
+	login_file.open(login, fstream::in | fstream::out | ios::app);
+	password_file.open(password, fstream::in | fstream::out | ios::app);
 	if (!login_file.is_open() && !password_file.is_open()) {
 		cout << "Error!" << endl;
 	}
