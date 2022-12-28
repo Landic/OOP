@@ -1,0 +1,5 @@
+﻿  ArrayValueCalculator.cpp
+  main.cpp
+  Generating Code...
+C:\Users\Volk_pbk6\Desktop\Volkov_HW_47_OOP\Volkov_HW_47_OOP\main.cpp(11,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Volkov_HW_47_OOP.vcxproj -> C:\Users\Volk_pbk6\Desktop\Volkov_HW_47_OOP\x64\Debug\Volkov_HW_47_OOP.exe
