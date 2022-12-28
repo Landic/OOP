@@ -1,0 +1,3 @@
+﻿  Main.cpp
+C:\Users\User\Desktop\Project2OOP\Project2OOP\Main.cpp(65,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Project2OOP.vcxproj -> C:\Users\User\Desktop\Project2OOP\x64\Debug\Project2OOP.exe
